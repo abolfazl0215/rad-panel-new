@@ -1,0 +1,26 @@
+{
+  "name": "estate-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "axios": "^1.7.9",
+    "zustand": "^5.0.3",
+    "swiper": "^11.1.15",
+    "lucide-react": "^0.468.0",
+    "react-hot-toast": "^2.4.1",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "autoprefixer": "^10.4.20"
+  }
+}

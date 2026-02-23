@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Playfair Display";
+  --font-body:    "DM Sans";
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #0a0a0f; min-height: 100dvh; }
+
+/* ── Scrollbar ───────────────────────────── */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #111118; }
+::-webkit-scrollbar-thumb { background: #2e2e42; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3d3d55; }
+
+/* ── Reusable helpers ────────────────────── */
+.gold-bar {
+  background: linear-gradient(90deg, transparent, #e8aa30 40%, transparent);
+  height: 1px;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 0 1px rgba(232,170,48,.22), 0 8px 40px rgba(232,170,48,.07);
+}
+
+.glass {
+  background: rgba(26,26,38,.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* ── Form field base ─────────────────────── */
+.field {
+  @apply w-full bg-ink-900 border border-ink-600 rounded-xl px-3 py-2.5 text-sm text-white
+         placeholder-ink-400 transition-colors duration-150
+         focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20;
+}
+
+/* ── Skeleton shimmer ────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #1a1a26 25%, #242433 50%, #1a1a26 75%);
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+/* ── Swiper overrides ────────────────────── */
+.swiper-pagination-bullet              { background: #3d3d55 !important; opacity: 1 !important; }
+.swiper-pagination-bullet-active       { background: #e8aa30 !important; width: 20px !important; border-radius: 4px !important; }
+
+/* ── Modal backdrop ──────────────────────── */
+.modal-bg {
+  background: rgba(10,10,15,.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
